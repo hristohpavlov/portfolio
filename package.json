@@ -1,7 +1,10 @@
 {
-  "name": "portfolio-1",
-  "version": "0.1.0",
-  "private": true,
+  "name": "portfolio",
+  "version": "1.0.0",
+  "homepage": "https://hristopavlov.dev",
+  "description": "Portfolio website for Hristo Pavlov",
+  "repository": "https://github.com/hristohpavlov/portfolio.git",
+  "author": "Hristo Pavlov <hristohpavlov@gmail.com>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,8 +12,34 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "framer-motion": "^10.12.18",
+    "mdx-bundler": "^9.2.1",
     "next": "13.4.8",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "three": "^0.154.0",
+    "three-stdlib": "^2.23.12"
+  },
+  "devDependencies": {
+    "@mapbox/rehype-prism": "^0.8.0",
+    "@svgr/webpack": "^8.0.1",
+    "esbuild": "^0.18.11",
+    "eslint": "^8.44.0",
+    "eslint-config-next": "^13.4.8",
+    "fs-extra": "^11.1.1",
+    "globby": "^13.2.1",
+    "postcss": "^8.4.24",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^9.0.0",
+    "prettier": "^3.0.0",
+    "puppeteer": "^20.7.4",
+    "reading-time": "^1.5.0",
+    "rehype-img-size": "^1.0.1",
+    "rehype-preset-minify": "^6.0.0",
+    "rehype-slug": "^5.1.0",
+    "stylelint": "^15.10.0",
+    "stylelint-config-css-modules": "^4.2.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^34.0.0"
   }
 }
