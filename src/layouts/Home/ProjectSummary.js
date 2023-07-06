@@ -1,3 +1,5 @@
+import projectKatakanaLaptop from 'assets/katakana-project-laptop.svg?url';
+import projectKatakanaLaptop2 from 'assets/katakana-project-laptop-2.svg?url';
 import projectKatakana from 'assets/katakana-project.svg?url';
 import { Button } from 'components/Button';
 import { Divider } from 'components/Divider';
@@ -38,7 +40,7 @@ export const ProjectSummary = ({
   const phoneSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
   const laptopSizes = `(max-width: ${media.tablet}px) 80vw, 40vw`;
 
-  const renderKatakana = (device, visible) => (
+  const renderKatakana = (device, visible, id) => (
     <svg
       aria-hidden="true"
       width="750"
@@ -50,7 +52,10 @@ export const ProjectSummary = ({
       className={styles.svg}
       data-device={device}
     >
-      <use href={`${projectKatakana}#katakana-project`} />
+      {(device === 'laptop' && id === 'project-1') && <use href={`${projectKatakanaLaptop}#katakana-project`}/>}
+      {(device === 'laptop' && id === 'project-3') && <use href={`${projectKatakanaLaptop2}#katakana-project`}/>}
+      {device === 'phone' && <use href={`${projectKatakana}#katakana-project`}/> }
+      
     </svg>
   );
 
@@ -91,7 +96,7 @@ export const ProjectSummary = ({
     <div className={styles.preview}>
       {model.type === 'laptop' && (
         <>
-          {renderKatakana('laptop', visible)}
+          {renderKatakana('laptop', visible, id)}
           <div className={styles.model} data-device="laptop">
             <Model
               alt={model.alt}
@@ -113,7 +118,7 @@ export const ProjectSummary = ({
       )}
       {model.type === 'phone' && (
         <>
-          {renderKatakana('phone', visible)}
+          {renderKatakana('phone', visible, id)}
           <div className={styles.model} data-device="phone">
             <Model
               alt={model.alt}
