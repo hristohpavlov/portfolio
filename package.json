@@ -17,8 +17,8 @@
     "next": "13.4.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "three": "^0.154.0",
-    "three-stdlib": "^2.23.12"
+    "three": "^0.146.0",
+    "three-stdlib": "^2.18.1"
   },
   "devDependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
