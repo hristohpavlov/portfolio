@@ -24,9 +24,9 @@ export const socialLinks = [
     icon: 'twitter',
   },
   {
-    label: 'Figma',
+    label: 'Linkedin',
     url: 'https://www.linkedin.com/in/hristo-h-pavlov/',
-    icon: 'figma',
+    icon: 'linkedin',
   },
   {
     label: 'Github',
