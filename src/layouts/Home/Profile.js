@@ -22,15 +22,15 @@ const ProfileText = ({ visible, titleId }) => (
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       I’m Hristo, currently I live in Bulgaria working as a software developer at{' '}
-      <Link href="https://www.akkodis.com/">Akkodis Group</Link>. My projects include UX design, UI
-      animations, and icon illustration. Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
-      use check out my <Link href="/uses">uses page</Link>.
+      <Link href="https://www.akkodis.com/">Akkodis Group</Link>. The projects I mainly work on, are web development oriented
+      , with mainly doing fullstack web development. Being comfortable with code allows me to rapidly
+      prototype and validate experiences. If you’re interested in my professional qualification
+      check out my <Link href="/resume">resume page</Link>.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-      <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
-      about new projects, so feel free to drop me a line.
+      In my spare time I like to read books, play video games, and sometimes{' '}
+      <Link href="/projects/volkihar-knight">make games</Link>. I’m always down for hearing
+      about new projects and ideas, so feel free to reach out.
     </Text>
   </Fragment>
 );
@@ -84,7 +84,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                   placeholder={profileImgPlaceholder}
                   srcSet={[profileImg, profileImgLarge]}
                   sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
-                  alt="Me standing in front of the Torii on Miyajima, an island off the coast of Hiroshima in Japan"
+                  alt="Me standing in front of the Roman Colliseum, Rome, Italy"
                 />
                 <svg
                   aria-hidden="true"
