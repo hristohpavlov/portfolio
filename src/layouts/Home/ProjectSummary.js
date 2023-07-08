@@ -1,6 +1,6 @@
-import projectKatakanaLaptop from 'assets/katakana-project-laptop.svg?url';
-import projectKatakanaLaptop2 from 'assets/katakana-project-laptop-2.svg?url';
-import projectKatakana from 'assets/katakana-project.svg?url';
+import katakanaPhone from 'assets/katakana-phone.svg?url';
+import katakanaComputer from 'assets/katakana-computer.svg?url';
+import katakanaLaptop from 'assets/katakana-laptop.svg?url';
 import { Button } from 'components/Button';
 import { Divider } from 'components/Divider';
 import { Heading } from 'components/Heading';
@@ -39,6 +39,7 @@ export const ProjectSummary = ({
   const indexText = index < 10 ? `0${index}` : index;
   const phoneSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
   const laptopSizes = `(max-width: ${media.tablet}px) 80vw, 40vw`;
+  const computerSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
 
   const renderKatakana = (device, visible, id) => (
     <svg
@@ -52,9 +53,9 @@ export const ProjectSummary = ({
       className={styles.svg}
       data-device={device}
     >
-      {(device === 'laptop' && id === 'project-1') && <use href={`${projectKatakanaLaptop}#katakana-project`}/>}
-      {(device === 'laptop' && id === 'project-3') && <use href={`${projectKatakanaLaptop2}#katakana-project`}/>}
-      {device === 'phone' && <use href={`${projectKatakana}#katakana-project`}/> }
+      {(model.type === 'phone') && <use href={`${katakanaPhone}#katakana-project`}/>}
+      {(model.type === 'computer') && <use href={`${katakanaComputer}#katakana-project`}/>}
+      {model.type === 'laptop' && <use href={`${katakanaLaptop}#katakana-project`}/> }
       
     </svg>
   );
@@ -96,7 +97,7 @@ export const ProjectSummary = ({
     <div className={styles.preview}>
       {model.type === 'laptop' && (
         <>
-          {renderKatakana('laptop', visible, id)}
+          {renderKatakana('laptop', visible, model)}
           <div className={styles.model} data-device="laptop">
             <Model
               alt={model.alt}
@@ -116,9 +117,31 @@ export const ProjectSummary = ({
           </div>
         </>
       )}
+      {model.type === 'computer' && (
+        <>
+          {renderKatakana('computer', visible, model)}
+          <div className={styles.model} data-device="computer">
+            <Model
+              alt={model.alt}
+              cameraPosition={{ x: -0.1, y: 0.45, z: 2.6 }}
+              showDelay={700}
+              show={visible}
+              models={[
+                {
+                  ...deviceModels.computer,
+                  texture: {
+                    ...model.textures[0],
+                    sizes: computerSizes,
+                  },
+                },
+              ]}
+            />
+          </div>
+        </>
+      )}
       {model.type === 'phone' && (
         <>
-          {renderKatakana('phone', visible, id)}
+          {renderKatakana('phone', visible, model)}
           <div className={styles.model} data-device="phone">
             <Model
               alt={model.alt}

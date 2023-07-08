@@ -508,7 +508,9 @@ const Device = ({
         animation = playAnimation();
       }
 
-      await loadFullResTexture();
+      if(loadFullResTexture){
+        await loadFullResTexture();
+      }
 
       if (reduceMotion) {
         renderFrame();

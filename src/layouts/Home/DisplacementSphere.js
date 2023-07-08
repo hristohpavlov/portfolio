@@ -81,8 +81,6 @@ export const DisplacementSphere = props => {
     };
 
     startTransition(() => {
-      // var SphereBufferGeometry = new SphereBufferGeometry(32, 128, 128);
-      // geometry.current = SphereBufferGeometry();
       geometry.current = new SphereBufferGeometry(32, 128, 128);
       sphere.current = new Mesh(geometry.current, material.current);
       sphere.current.position.z = 0;
