@@ -41,7 +41,7 @@ export const ProjectSummary = ({
   const laptopSizes = `(max-width: ${media.tablet}px) 80vw, 40vw`;
   const computerSizes = `(max-width: ${media.tablet}px) 80vw, 40vw`;
 
-  const renderKatakana = (device, visible, id) => (
+  const renderKatakana = (device, visible) => (
     <svg
       aria-hidden="true"
       width="750"
@@ -53,9 +53,9 @@ export const ProjectSummary = ({
       className={styles.svg}
       data-device={device}
     >
-      {(model.type === 'phone') && <use href={`${katakanaPhone}#katakana-project`}/>}
-      {(model.type === 'computer') && <use href={`${katakanaComputer}#katakana-project`}/>}
-      {model.type === 'laptop' && <use href={`${katakanaLaptop}#katakana-project`}/> }
+      {(device === 'phone') && <use href={`${katakanaPhone}#katakana-project`}/>}
+      {(device === 'computer') && <use href={`${katakanaComputer}#katakana-project`}/>}
+      {(device === 'laptop') && <use href={`${katakanaLaptop}#katakana-project`}/> }
       
     </svg>
   );
