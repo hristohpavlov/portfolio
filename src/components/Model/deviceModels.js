@@ -19,7 +19,7 @@ export const deviceModels = {
     url: imacPro,
     width: 574,
     height: 512,
-    position: { x: 0, y: 0, z: 0.5 },
+    position: { x: 0, y: 0, z: 0.7 },
     animation: ModelAnimationType.SpringUp,
   },
   laptop: {
