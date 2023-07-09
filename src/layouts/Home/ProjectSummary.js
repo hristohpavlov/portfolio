@@ -39,7 +39,7 @@ export const ProjectSummary = ({
   const indexText = index < 10 ? `0${index}` : index;
   const phoneSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
   const laptopSizes = `(max-width: ${media.tablet}px) 80vw, 40vw`;
-  const computerSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
+  const computerSizes = `(max-width: ${media.tablet}px) 80vw, 40vw`;
 
   const renderKatakana = (device, visible, id) => (
     <svg
@@ -123,7 +123,7 @@ export const ProjectSummary = ({
           <div className={styles.model} data-device="computer">
             <Model
               alt={model.alt}
-              cameraPosition={{ x: 0, y: 0.45, z: 2.6 }}
+              cameraPosition={{ x: 0, y: 0.45, z: 2.9 }}
               showDelay={700}
               show={visible}
               models={[
