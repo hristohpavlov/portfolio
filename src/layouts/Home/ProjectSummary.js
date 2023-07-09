@@ -123,7 +123,7 @@ export const ProjectSummary = ({
           <div className={styles.model} data-device="computer">
             <Model
               alt={model.alt}
-              cameraPosition={{ x: -0.1, y: 0.45, z: 2.6 }}
+              cameraPosition={{ x: 0, y: 0.45, z: 2.6 }}
               showDelay={700}
               show={visible}
               models={[
