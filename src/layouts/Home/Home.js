@@ -86,7 +86,7 @@ export const Home = () => {
         title="Finanztreff. Designing the future of education"
         description="Designing a platform to help educators build better online courseware"
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="/projects/finanztreff"
         model={{
           type: 'computer',
           alt: 'Smart Sparrow lesson builder',
@@ -107,7 +107,7 @@ export const Home = () => {
         title="Planet hopper. Video game progress tracking"
         description="Design and development for a video game tracking app built in React Native"
         buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        buttonLink="/projects/planethopper"
         model={{
           type: 'phone',
           alt: 'App login screen',
@@ -131,7 +131,7 @@ export const Home = () => {
         title="App global. Biomedical image collaboration"
         description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
         buttonText="View project"
-        buttonLink="/projects/slice"
+        buttonLink="/projects/appg"
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
