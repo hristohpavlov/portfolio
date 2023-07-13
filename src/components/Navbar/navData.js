@@ -9,7 +9,7 @@ export const navLinks = [
   },
   {
     label: 'Resume',
-    pathname: '/ressme',
+    pathname: '/resume',
   },
   {
     label: 'Contact',
