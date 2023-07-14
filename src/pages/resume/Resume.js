@@ -98,7 +98,7 @@ const ArticlesPost = ({
       </RouterLink>
       {featured && (
         <Text aria-hidden className={styles.postTag} size="s">
-          477
+          2607
         </Text>
       )}
     </article>
