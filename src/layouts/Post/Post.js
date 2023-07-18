@@ -102,7 +102,9 @@ export const Post = ({ children, title, date, abstract, banner, timecode, ogImag
       </Section>
       <Section className={styles.wrapper} id="postContent" tabIndex={-1}>
         <Text as="div" size="l" className={styles.content}>
+           <div className={styles.object_pdf}>
           {children}
+          </div>
         </Text>
       </Section>
       <Footer />

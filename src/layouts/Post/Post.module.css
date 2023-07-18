@@ -251,3 +251,22 @@
     grid-column: var(--mainColumn);
   }
 }
+@media (min-width: 1041px) and (--mediaLaptop) {
+   
+  .object_pdf{
+    height: 933px;
+  }
+}
+  
+  @media (min-width: 697px) and (--mediaTablet) {
+   
+    .object_pdf{
+      height: 704px;
+    }
+  }
+  @media (--mediaMobile) {
+    
+    .object_pdf{
+      height: 440px;
+    }
+  }
