@@ -10,11 +10,11 @@ import { useFoucFix, useLocalStorage } from 'hooks';
 import styles from 'layouts/App/App.module.css';
 import { initialState, reducer } from 'layouts/App/reducer';
 import Head from 'next/head';
-import Script from 'next/script';
 import { useRouter } from 'next/router';
 import { Fragment, createContext, useEffect, useReducer } from 'react';
 import { msToNum } from 'utils/style';
 import { ScrollRestore } from '../layouts/App/ScrollRestore';
+import { Analytics } from '@vercel/analytics/react';
 
 export const AppContext = createContext({});
 
@@ -38,22 +38,6 @@ const App = ({ Component, pageProps }) => {
 
   return (
     <AppContext.Provider value={{ ...state, dispatch }}>
-      <Script
-        strategy="lazyOnload"
-        id="gtagManager"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
-
-      <Script strategy="lazyOnload" id="gtagDataLayer">
-        {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-                    page_path: window.location.pathname,
-                    });
-                `}
-      </Script>
       <ThemeProvider themeId={state.theme}>
         <LazyMotion features={domAnimation}>
           <Fragment>
@@ -88,6 +72,7 @@ const App = ({ Component, pageProps }) => {
                   }}
                 >
                   <ScrollRestore />
+                  <Analytics />
                   <Component {...pageProps} />
                 </m.div>
               </AnimatePresence>
