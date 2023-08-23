@@ -19,6 +19,7 @@ export const Contact = () => {
   const errorRef = useRef();
   const email = useFormInput('');
   const message = useFormInput('');
+  const name = useFormInput('');
   const [sending, setSending] = useState(false);
   const [complete, setComplete] = useState(false);
   const [statusError, setStatusError] = useState('');
@@ -33,7 +34,7 @@ export const Contact = () => {
     try {
       setSending(true);
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/message`, {
+      const response = await fetch(`/api/mail`, {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -41,6 +42,7 @@ export const Contact = () => {
         },
         body: JSON.stringify({
           email: email.value,
+          name: name.value,
           message: message.value,
         }),
       });
@@ -85,6 +87,17 @@ export const Contact = () => {
               className={styles.divider}
               data-status={status}
               style={getDelay(tokens.base.durationXS, initDelay, 0.4)}
+            />
+            <Input
+              required
+              className={styles.input}
+              data-status={status}
+              style={getDelay(tokens.base.durationXS, initDelay)}
+              autoComplete="name"
+              label="Your Name"
+              type="name"
+              maxLength={512}
+              {...name}
             />
             <Input
               required

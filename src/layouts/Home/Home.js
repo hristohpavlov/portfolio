@@ -83,10 +83,10 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Astro.Tech . Making space cool (again)"
+        title="ASTRO : making space cool (again)"
         description="Modern interactive platform, that enables the user to see realtime space launch information and data."
         buttonText="View project"
-        buttonLink="/projects/astrotech"
+        buttonLink="/projects/astro"
         model={{
           type: 'computer',
           alt: 'Modern rocket launch visualiser',
@@ -104,7 +104,7 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Planet.Hopper . Fun and challanging mobile car game"
+        title="PLANETHOPPER : fun and challanging mobile car game"
         description="Hop in your car and try reaching the next planet while avoiding dynamicly spawned obstacles."
         buttonText="View website"
         buttonLink="/projects/planethopper"
@@ -128,7 +128,7 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="W.I.P... Open to ideas"
+        title="W.I.P. : open to ideas.."
         description="W.I.P... Open to ideas"
         buttonText="View project"
         buttonLink="/projects/wip"
