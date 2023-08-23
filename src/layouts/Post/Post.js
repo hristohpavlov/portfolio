@@ -8,7 +8,7 @@ import { Section } from 'components/Section';
 import { Text } from 'components/Text';
 import { tokens } from 'components/ThemeProvider/theme';
 import { Transition } from 'components/Transition';
-import { useLocalStorage, useParallax, useScrollToHash } from 'hooks';
+import { useParallax, useScrollToHash } from 'hooks';
 import RouterLink from 'next/link';
 import { useRef, useState, useEffect } from 'react';
 import { clamp } from 'utils/clamp';

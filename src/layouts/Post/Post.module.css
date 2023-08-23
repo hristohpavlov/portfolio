@@ -269,12 +269,8 @@
       height: 440px;
       margin-top: 20%
     }
-    @media (prefers-color-scheme: dark) {
-      .object_pdf{
-        filter: invert(0.95);
-      }
-    }
-    .object_pdf{
-      filter: invert(0);
-    }
+  }
+  
+  .object_pdf{
+    filter: invert(0) !important;
   }
