@@ -8,7 +8,7 @@ import { Section } from 'components/Section';
 import { Text } from 'components/Text';
 import { tokens } from 'components/ThemeProvider/theme';
 import { Transition } from 'components/Transition';
-import { useParallax, useScrollToHash } from 'hooks';
+import { useLocalStorage, useParallax, useScrollToHash } from 'hooks';
 import RouterLink from 'next/link';
 import { useRef, useState, useEffect } from 'react';
 import { clamp } from 'utils/clamp';
@@ -34,6 +34,7 @@ export const Post = ({ children, title, date, abstract, banner, timecode, ogImag
     event.preventDefault();
     scrollToHash(event.currentTarget.href);
   };
+
 
   return (
     <article className={styles.post}>
@@ -103,7 +104,7 @@ export const Post = ({ children, title, date, abstract, banner, timecode, ogImag
       <Section className={styles.wrapper} id="postContent" tabIndex={-1}>
         <Text as="div" size="l" className={styles.content}>
         {title === "Professional Experience" && <object className={styles.object_pdf} data="/static/hristopavlov-cv.pdf" type="application/pdf" width="100%" height="750px">
-    <embed src="/static/hristopavlov-cv.pdf" type="application/pdf"/>
+        <embed src="/static/hristopavlov-cv.pdf" type="application/pdf"/>
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/static/hristopavlov-cv.pdf">Download PDF</a>.</p>
 </object>}
           {title !== "Professional Experience" && <>{children}</>}
