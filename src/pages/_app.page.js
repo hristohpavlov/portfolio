@@ -10,6 +10,7 @@ import { useFoucFix, useLocalStorage } from 'hooks';
 import styles from 'layouts/App/App.module.css';
 import { initialState, reducer } from 'layouts/App/reducer';
 import Head from 'next/head';
+import Script from 'next/script';
 import { useRouter } from 'next/router';
 import { Fragment, createContext, useEffect, useReducer } from 'react';
 import { msToNum } from 'utils/style';
