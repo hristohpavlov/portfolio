@@ -36,11 +36,11 @@ export function Page404() {
                   as="h2"
                   level={3}
                 >
-                  <DecoderText text="Error: Redacted" start={visible} delay={300} />
+                  <DecoderText text="Error: Not Found" start={visible} delay={300} />
                 </Heading>
                 <Text className={styles.description} data-visible={visible} as="p">
                   This page could not be found. It either doesn’t exist or was deleted. Or
-                  perhaps you don’t exist.
+                  perhaps you don’t exist. Getsuga tensho!
                 </Text>
                 <Button
                   secondary
@@ -74,7 +74,7 @@ export function Page404() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Animation from Ghost in the Shell (1995)
+                Animation from Bleach (2004)
               </a>
             </div>
           </Fragment>
