@@ -27,6 +27,7 @@ cors({
     return callback(null, true);
   },
 });
+
 export default async function handler(req, res){
   try{
     const email = DOMPurify.sanitize(req.body.email);
