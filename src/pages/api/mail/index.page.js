@@ -26,7 +26,7 @@ cors({
 
     return callback(null, true);
   },
-})
+});
 export default async function handler(req, res){
   try{
     const email = DOMPurify.sanitize(req.body.email);
@@ -71,7 +71,7 @@ export default async function handler(req, res){
     html: `
     <p><strong>${email}</strong></p>
     <p>${message}</p>`
-  }
+  };
   await mail.send(data);
   return res.status(200).json({ message: 'Message sent successfully' });
 } catch(error) {
