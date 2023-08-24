@@ -40,7 +40,6 @@ export const Post = ({ children, title, date, abstract, banner, timecode, ogImag
     from_localStorage = window.localStorage.getItem('theme');
     from_localStorage = from_localStorage.slice(1, from_localStorage.length-1);
   }
-  console.log(from_localStorage)
   return (
     <article className={styles.post}>
       <Meta title={title} prefix="" description={abstract} ogImage={ogImage} />
