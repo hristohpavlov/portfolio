@@ -40,6 +40,7 @@ export const Post = ({ children, title, date, abstract, banner, timecode, ogImag
     from_localStorage = window.localStorage.getItem('theme');
     from_localStorage = from_localStorage.slice(1, from_localStorage.length-1);
   }
+  console.log(from_localStorage)
   return (
     <article className={styles.post}>
       <Meta title={title} prefix="" description={abstract} ogImage={ogImage} />
@@ -107,13 +108,16 @@ export const Post = ({ children, title, date, abstract, banner, timecode, ogImag
       </Section>
       <Section className={styles.wrapper} id="postContent" tabIndex={-1}>
         <Text as="div" size="l" className={styles.content}>
-        {(title === "Professional Experience" && from_localStorage === "dark") ? <object className={styles.object_pdf} data="/static/hristopavlov-cv.pdf" type="application/pdf" width="100%" height="750px">
+        {title === "Professional Experience" && 
+          <>
+            {from_localStorage === 'dark' ? <object className={styles.object_pdf} data="/static/hristopavlov-cv.pdf" type="application/pdf" width="100%" height="750px">
               <embed src="/static/hristopavlov-cv.pdf" type="application/pdf"/>
               <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/static/hristopavlov-cv.pdf">Download PDF</a>.</p>
             </object> : <object className={styles.object_pdf} data="/static/hristopavlov-cv.pdf" style={{filter:'invert(0.85)'}}type="application/pdf" width="100%" height="750px">
               <embed src="/static/hristopavlov-cv.pdf" type="application/pdf"/>
               <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/static/hristopavlov-cv.pdf">Download PDF</a>.</p>
-            </object>
+            </object>}
+          </>
           }
           {title !== "Professional Experience" && <>{children}</>}
         </Text>
