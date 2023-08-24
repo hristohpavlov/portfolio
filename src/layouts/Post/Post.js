@@ -35,10 +35,10 @@ export const Post = ({ children, title, date, abstract, banner, timecode, ogImag
     scrollToHash(event.currentTarget.href);
   };
 
-  let from_localStorage
+  let from_localStorage;
   if (typeof window !== 'undefined'){
-    from_localStorage = window.localStorage.getItem('theme')
-    from_localStorage = from_localStorage.slice(1, from_localStorage.length-1)
+    from_localStorage = window.localStorage.getItem('theme');
+    from_localStorage = from_localStorage.slice(1, from_localStorage.length-1);
   }
   return (
     <article className={styles.post}>
