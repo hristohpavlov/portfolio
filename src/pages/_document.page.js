@@ -19,6 +19,7 @@ export default function Document() {
         <link rel="preconnect" href={GothamBook} as="font" crossOrigin="true" />
         <style dangerouslySetInnerHTML={{ __html: fontStyles }} />
         <style dangerouslySetInnerHTML={{ __html: tokenStyles }} />
+        <meta name="description" content='Personal Portfolio website of Hristo Pavlov. Software developer'></meta>
       </Head>
       <body data-theme="dark" tabIndex={-1}>
         <script
