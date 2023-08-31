@@ -8,13 +8,15 @@ import { Section } from 'components/Section';
 import { Text } from 'components/Text';
 import { tokens } from 'components/ThemeProvider/theme';
 import { Transition } from 'components/Transition';
-import { useParallax, useScrollToHash } from 'hooks';
+import { useParallax, useScrollToHash} from 'hooks';
 import RouterLink from 'next/link';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, useReducer} from 'react';
+import { initialState, reducer } from 'layouts/App/reducer';
 import { clamp } from 'utils/clamp';
 import { formatDate } from 'utils/date';
 import { cssProps, msToNum, numToMs } from 'utils/style';
 import styles from './Post.module.css';
+import { useTheme } from 'components/ThemeProvider';
 
 export const Post = ({ children, title, date, abstract, banner, timecode, ogImage }) => {
   const scrollToHash = useScrollToHash();
@@ -34,12 +36,7 @@ export const Post = ({ children, title, date, abstract, banner, timecode, ogImag
     event.preventDefault();
     scrollToHash(event.currentTarget.href);
   };
-
-  let from_localStorage;
-  if (typeof window !== 'undefined'){
-    from_localStorage = window.localStorage.getItem('theme');
-    from_localStorage = from_localStorage.slice(1, from_localStorage.length-1);
-  }
+  const theme = useTheme();
   return (
     <article className={styles.post}>
       <Meta title={title} prefix="" description={abstract} ogImage={ogImage} />
@@ -109,7 +106,7 @@ export const Post = ({ children, title, date, abstract, banner, timecode, ogImag
         <Text as="div" size="l" className={styles.content}>
         {title === "Professional Experience" && 
           <>
-            {from_localStorage === 'dark' ? <object className={styles.object_pdf} data="/static/hristopavlov-cv.pdf" type="application/pdf" width="100%" height="750px">
+            {theme.themeId === 'dark' ? <object className={styles.object_pdf} data="/static/hristopavlov-cv.pdf" type="application/pdf" width="100%" height="750px">
               <embed src="/static/hristopavlov-cv.pdf" type="application/pdf"/>
               <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/static/hristopavlov-cv.pdf">Download PDF</a>.</p>
             </object> : <object className={styles.object_pdf} data="/static/hristopavlov-cv.pdf" style={{filter:'invert(0.85)'}}type="application/pdf" width="100%" height="750px">
