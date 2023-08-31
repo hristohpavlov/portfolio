@@ -86,7 +86,7 @@ export const Home = () => {
         title="ASTRO : making space cool (again)"
         description="Modern interactive platform, that enables the user to see realtime space launch information and data."
         buttonText="View project"
-        buttonLink="/projects/astro"
+        buttonLink="https://astro-gamma-mocha.vercel.app/"
         model={{
           type: 'computer',
           alt: 'Modern rocket launch visualiser',
