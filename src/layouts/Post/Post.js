@@ -106,14 +106,14 @@ export const Post = ({ children, title, date, abstract, banner, timecode, ogImag
         {title === "Professional Experience" && 
           <>
             {
-            theme.themeId === 'dark'
+            theme.themeId === 'light'
             ? 
             <object className={styles.object_pdf} data="/static/hristopavlov-cv.pdf"  type="application/pdf" width="100%" height="750px">
               <embed src="/static/hristopavlov-cv.pdf" type="application/pdf"/>
               <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/static/hristopavlov-cv.pdf">Download PDF</a>.</p>
             </object> 
             : 
-            <object className={styles.object_pdf} data="/static/hristopavlov-cv.pdf" style={{filter:'invert(0.85)'}} type="application/pdf" width="100%" height="750px">
+            <object className={styles.object_pdf} data="/static/hristopavlov-cv.pdf" style={{filter:'invert(0.95)'}} type="application/pdf" width="100%" height="750px">
               <embed src="/static/hristopavlov-cv.pdf" type="application/pdf"/>
               <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/static/hristopavlov-cv.pdf">Download PDF</a>.</p>
             </object>
