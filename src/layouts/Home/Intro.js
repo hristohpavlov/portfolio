@@ -65,21 +65,21 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
             <DisplacementSphere />
             <header className={styles.text}>
               <h1 className={styles.name} data-visible={visible} id={titleId}>
-                <DecoderText text="Hristo Pavlov" delay={300} />
+                <DecoderText text="Hristo Pavlov"  delay={300} />
               </h1>
               <Heading level={0} as="h2" className={styles.title}>
                 <VisuallyHidden className={styles.label}>
                   {`Software ⨭ ${introLabel}`}
                 </VisuallyHidden>
                 <span aria-hidden className={styles.row}>
-                  <span
+                <span className={styles.line} data-status={status} />
+                <span
                     className={styles.word}
                     data-status={status}
                     style={cssProps({ delay: tokens.base.durationXS })}
                   >
                     Software
                   </span>
-                  <span className={styles.line} data-status={status} />
                 </span>
                 <div className={styles.row} component="span">
                   <AnimatePresence>

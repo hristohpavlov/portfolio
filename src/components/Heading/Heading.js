@@ -6,7 +6,7 @@ export const Heading = ({
   children,
   level = 1,
   as,
-  align = 'auto',
+  align = 'right',
   weight = 'medium',
   className,
   ...rest
