@@ -125,13 +125,13 @@ export const DisplacementSphere = props => {
     }
 
     if (width <= media.mobile) {
-      sphere.current.position.x = 14;
+      sphere.current.position.x = -14;
       sphere.current.position.y = 10;
     } else if (width <= media.tablet) {
-      sphere.current.position.x = 18;
+      sphere.current.position.x = -18;
       sphere.current.position.y = 14;
     } else {
-      sphere.current.position.x = 22;
+      sphere.current.position.x = -22;
       sphere.current.position.y = 16;
     }
   }, [reduceMotion, windowSize]);
