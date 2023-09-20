@@ -2,6 +2,7 @@ import katakanaPhone from 'assets/katakana-phone.svg?url';
 import katakanaComputer from 'assets/katakana-computer.svg?url';
 import katakanaLaptop from 'assets/katakana-laptop.svg?url';
 import { Button } from 'components/Button';
+import { ButtonCode } from 'components/ButtonCode';
 import { Divider } from 'components/Divider';
 import { Heading } from 'components/Heading';
 import { deviceModels } from 'components/Model/deviceModels';
@@ -28,6 +29,8 @@ export const ProjectSummary = ({
   buttonText,
   buttonLink,
   alternate,
+  hasCodeButton,
+  codeLink,
   ...rest
 }) => {
   const [focused, setFocused] = useState(false);
@@ -89,6 +92,13 @@ export const ProjectSummary = ({
         <Button iconHoverShift href={buttonLink} iconEnd="arrowRight">
           {buttonText}
         </Button>
+        {
+          hasCodeButton && 
+        <ButtonCode iconHoverShift href={codeLink} iconEnd="arrowRight">
+          Code
+        </ButtonCode>
+        }
+        
       </div>
     </div>
   );

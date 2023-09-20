@@ -87,6 +87,8 @@ export const Home = () => {
         description="Modern interactive platform, that enables the user to see realtime space launch information and data."
         buttonText="View project"
         buttonLink="https://astro-gamma-mocha.vercel.app/"
+        hasCodeButton={true}
+        codeLink="https://github.com/hristohpavlov/astro"
         model={{
           type: 'computer',
           alt: 'Modern rocket launch visualiser',
@@ -108,6 +110,7 @@ export const Home = () => {
         description="Hop in your car and try reaching the next planet while avoiding dynamicly spawned obstacles."
         buttonText="View website"
         buttonLink="/projects/planethopper"
+        hasCodeButton={false}
         model={{
           type: 'phone',
           alt: 'App login screen',
@@ -132,6 +135,7 @@ export const Home = () => {
         description="W.I.P... Open to ideas"
         buttonText="View project"
         buttonLink="/projects/wip"
+        hasCodeButton={false}
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
