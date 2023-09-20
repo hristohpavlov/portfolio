@@ -28,8 +28,8 @@ const ProfileText = ({ visible, titleId }) => (
       check out my <Link href="/resume">resume page</Link>.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to read books, play video games, and sometimes{' '}
-      <Link href="/projects/volkihar-knight">make games</Link>. I’m always down for hearing
+      In my spare time I like to read books, play video games, and sometimes even{' '}
+      <Link href="/projects/planethopper">make them</Link>. I’m always down for hearing
       about new projects and ideas, so feel free to reach out.
     </Text>
   </Fragment>
