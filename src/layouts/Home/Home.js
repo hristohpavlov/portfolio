@@ -18,7 +18,7 @@ import { ProjectSummary } from 'layouts/Home/ProjectSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 
-const disciplines = ['Developer', 'Engineer' , 'Specialist' , 'Enthusiast', 'Guru'];
+const disciplines = ['Developer', 'Engineer' , 'Specialist' , 'Enthusiast'];
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -68,7 +68,7 @@ export const Home = () => {
   return (
     <div className={styles.home}>
       <Meta
-        title="Software ⨭ Developer"
+        title="Software Developer"
         description="Design portfolio of Hristo Pavlov — a product designer working on web & mobile
           apps with a focus on motion, experience design, and accessibility."
       />

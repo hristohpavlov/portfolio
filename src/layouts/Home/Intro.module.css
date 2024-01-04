@@ -158,7 +158,7 @@
   }
 
   &[data-plus='true']::before {
-    content: '⨭';
+    content: '';
     margin-right: 10px;
     opacity: 0.4;
   }
