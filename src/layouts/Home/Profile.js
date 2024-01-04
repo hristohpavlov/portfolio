@@ -94,7 +94,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                   className={styles.svg}
                   data-visible={visible}
                 >
-                  <use href={`${profileKatakana}#katakana-profile`} />
+                  {/* <use href={`${profileKatakana}#katakana-profile`} /> */}
                 </svg>
               </div>
             </div>

@@ -9,7 +9,7 @@
   width: var(--space2XL);
   position: fixed;
   top: var(--spaceOuter);
-  left: var(--spaceOuter);
+  right: var(--spaceOuter);
   bottom: var(--spaceOuter);
   z-index: var(--zIndex4);
   isolation: isolate;

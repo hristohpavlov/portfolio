@@ -57,8 +57,8 @@ export const ProjectSummary = ({
       data-device={device}
     >
       {(device === 'phone') && <use href={`${katakanaPhone}#katakana-project`}/>}
-      {(device === 'computer') && <use href={`${katakanaComputer}#katakana-project`}/>}
-      {(device === 'laptop') && <use href={`${katakanaLaptop}#katakana-project`}/> }
+      {/* {(device === 'computer') && <use href={`${katakanaComputer}#katakana-project`}/>} */}
+      {/* {(device === 'laptop') && <use href={`${katakanaLaptop}#katakana-project`}/> } */}
       
     </svg>
   );
@@ -111,7 +111,7 @@ export const ProjectSummary = ({
           <div className={styles.model} data-device="laptop">
             <Model
               alt={model.alt}
-              cameraPosition={{ x: 0, y: 0, z: 8 }}
+              cameraPosition={{ x: 0.5, y: 0, z: 10 }}
               showDelay={700}
               show={visible}
               models={[
