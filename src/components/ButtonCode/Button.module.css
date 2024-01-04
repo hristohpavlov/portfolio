@@ -2,6 +2,7 @@
   /* --buttonSize: calc((56 / 16) * 1rem); */
   width: 140px;
   margin-top: 3px;
+  margin-left: 54px;
   --buttonFontSize: calc((18 / 16) * 1rem);
   --buttonFocusWidth: 4px;
   --buttonPadding: 0 var(--spaceL);
@@ -34,7 +35,7 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, calc(0% + 8px) 100%, 0 calc(100% - 8px));
   }
 
   @media (--mediaUseMotion) {
