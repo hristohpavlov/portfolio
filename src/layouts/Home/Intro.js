@@ -72,7 +72,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                   {`Software ${introLabel}`}
                 </VisuallyHidden>
                 <span aria-hidden className={styles.row}>
-                <span className={styles.line} data-status={status} />
+                {/* <span className={styles.line} data-status={status} /> */}
                 <span
                     className={styles.word}
                     data-status={status}
