@@ -268,8 +268,8 @@
 
 .button {
   display: flex;
-    flex-direction: column;
-    float: left;
+  flex-direction: column;
+  float: right;
   transition-property: opacity;
   transition-timing-function: var(--bezierFastoutSlowin);
   transition-duration: var(--durationXL);
@@ -287,3 +287,26 @@
     opacity: 1;
   }
 }
+
+.alignLeftButtons {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  transition-property: opacity;
+  transition-timing-function: var(--bezierFastoutSlowin);
+  transition-duration: var(--durationXL);
+  transition-delay: var(--durationXL);
+  transform: translate3d(0, var(--spaceL), 0);
+  opacity: 0;
+
+  @media (--mediaUseMotion) {
+    transition-property: transform, opacity;
+    transform: translate3d(0, var(--spaceL), 0);
+  }
+
+  &[data-visible='true'] {
+    transform: none;
+    opacity: 1;
+  }
+}
+

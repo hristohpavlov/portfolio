@@ -110,7 +110,8 @@ export const Home = () => {
         description="Hop in your car and try reaching the next planet while avoiding dynamicly spawned obstacles."
         buttonText="View website"
         buttonLink="/projects/planethopper"
-        hasCodeButton={false}
+        hasCodeButton={true}
+        alignLeft={true}
         model={{
           type: 'phone',
           alt: 'App login screen',

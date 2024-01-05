@@ -39,6 +39,7 @@ const ButtonContent = forwardRef(
       target,
       href,
       disabled,
+      chipRightEdge,
       ...rest
     },
     ref
@@ -49,7 +50,7 @@ const ButtonContent = forwardRef(
 
     return (
       <Component
-        className={classes(styles.button, className)}
+        className={classes(chipRightEdge ? styles.chipLeft : styles.button, className)}
         data-loading={loading}
         data-icon-only={iconOnly}
         data-secondary={secondary}
