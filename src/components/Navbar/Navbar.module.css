@@ -20,6 +20,8 @@
 
   @media (--mediaMobile), (--mediaMobileLS) {
     bottom: auto;
+    right: unset;
+    left: var(--spaceOuter);
   }
 }
 
