@@ -53,7 +53,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
       <Transition in={visible || focused} timeout={0}>
         {visible => (
           <div className={styles.content}>
-            <div className={styles.column}>
+            <div className={styles.column + " left_column"}>
               <ProfileText visible={visible} titleId={titleId} />
               <Button
                 secondary
@@ -100,7 +100,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
             </div>
           </div>
         )}
-      </Transition>
+      </Transition> 
     </Section>
   );
 };

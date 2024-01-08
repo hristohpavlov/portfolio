@@ -33,7 +33,9 @@
     padding-left: var(--space4XL);
   }
 }
-
+.left_column{
+  max-width: 452px;
+}
 .content {
   display: grid;
   grid-template-columns: 1fr 50%;
@@ -70,7 +72,8 @@
 .description {
   margin-bottom: var(--spaceXL);
   opacity: 0;
-  transition: opacity var(--durationXL) ease var(--durationL);
+  /* transition: opacity var(--durationXL) ease var(--durationL); */
+  max-width: 435px;
 
   &[data-visible='true'] {
     opacity: 1;
