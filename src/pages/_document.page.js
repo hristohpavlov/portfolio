@@ -2,7 +2,7 @@ import GothamBook from 'assets/fonts/gotham-book.woff2';
 import GothamMedium from 'assets/fonts/gotham-medium.woff2';
 import { fontStyles, tokenStyles } from 'components/ThemeProvider';
 import { Head, Html, Main, NextScript } from 'next/document';
-// import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function Document() {
   return (
@@ -33,7 +33,7 @@ export default function Document() {
         />
         <Main />
         <NextScript />
-        {/* <SpeedInsights /> */}
+        <SpeedInsights />
         <div id="portal-root" />
       </body>
     </Html>
