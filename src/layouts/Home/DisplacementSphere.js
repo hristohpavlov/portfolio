@@ -114,9 +114,8 @@ export const DisplacementSphere = props => {
   useEffect(() => {
     const { width, height } = windowSize;
 
-    const adjustedHeight = height + height * 0.3;
-    renderer.current.setSize(width, adjustedHeight);
-    camera.current.aspect = width / adjustedHeight;
+    renderer.current.setSize(width, height);
+    camera.current.aspect = width / height;
     camera.current.updateProjectionMatrix();
 
     // Render a single frame on resize when not animating
